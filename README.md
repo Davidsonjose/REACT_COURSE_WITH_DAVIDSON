@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+#student LANRE
+#course React
+#Project PORTFOLIO, Eccomerce converting recent project to REACT
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
