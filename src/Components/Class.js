@@ -51,15 +51,20 @@ import React, { Component } from "react";
 //   }
 // }
 
-
 //props
-class Car extends Component{
-    render(){
-        return(
-            <div>i love color {this.props.title}</div>
-        )
-    }
-}
+// class Car extends Component{
+//     constructor(props){
+//         super(props)
+//     }
+//     render(){
+//         return(
+//             <div>
+//                 <p>{this.props.title}</p>
+//             </div>
+//         )
+//     }
+// }
+
 // function Car(props) {
 //     console.log(props);
 //     return(
@@ -68,5 +73,113 @@ class Car extends Component{
 //         </div>
 //     )
 // }
+
+//es6 eventlistner
+// function Car() {
+
+//     const shoot = (()=>{
+//         alert("You score successfully")
+//     });
+//     return(
+//         <div>
+//             <button onClick={shoot}>Shoot the ball</button>
+//         </div>
+//     )
+// }
+
+// function Car() {
+
+//     // const shoot = (()=>{
+//     //     alert("You score successfully")
+//     // });
+//     return(
+//         <div>
+//             <button onClick={(()=>{alert("Man united won the uefa champions league 2022")})}>Who won the ucl in 2022</button>
+//         </div>
+//     )
+// }
+
+function MissedGoal() {
+  return (
+    <div>
+      <h1>Missed</h1>
+    </div>
+  );
+}
+
+function ScoredGoal() {
+  return (
+    <div>
+      <h1>Scored</h1>
+    </div>
+  );
+}
+
+// function Car(props) {
+//     const isGoal = props.real;
+//     if (isGoal) {
+//         return(
+//             <div>
+//                 <ScoredGoal />
+//             </div>
+//         )
+//     }else{
+//         return(
+//             <div>
+//                 <MissedGoal />
+//             </div>
+//         )
+//     }
+// }
+
+// function Car(props) {
+//     const arraysLenght = props.array.length;
+//     return(
+//         <div>
+//             <h1>{arraysLenght}</h1>
+//         </div>
+//     )
+// }
+
+// function Car() {
+//     const arrays = ['Home', 'About', 'Blog', 'Contact'];
+//     return(
+//         <div>
+//             {arrays.map((data)=>{
+//                return(
+//                    <ul>{data}</ul>
+//                )
+//             })}
+//         </div>
+//     )
+// }
+
+function Car(params) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert("The name you entered was: " + `${name}`);
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+            Name: 
+        </label>
+          <input
+            type="email"
+            name="name"
+            value={text}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
+        <input type="submit" />
+      </form>
+    </div>
+  );
+}
+
+//forms ES6
 
 export default Car;

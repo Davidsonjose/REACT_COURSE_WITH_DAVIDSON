@@ -1,46 +1,42 @@
 import react from "react";
+import { about } from "./AboutDetail";
+// console.log(about)
 
 function About() {
   return (
-    <div>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-        quas vel fugit id officia beatae corrupti in. Perferendis dolore harum
-        esse optio recusandae officia itaque, veniam atque expedita nemo
-        reprehenderit, quas explicabo laboriosam obcaecati ad suscipit dolorem
-        quos commodi iure aperiam cupiditate doloremque. Omnis sunt optio
-        officia quas nisi hic amet placeat necessitatibus. Modi pariatur, nam
-        deserunt praesentium velit tempore placeat atque voluptate, reiciendis
-        ex iure aut et ea fugit voluptatum necessitatibus non vitae at rem
-        dignissimos illo numquam laboriosam eaque quia. Odio dicta similique
-        magnam quaerat, at expedita corrupti deserunt officia consequatur sit
-        non minima cupiditate provident doloribus labore beatae voluptas ad
-        laborum nostrum? Eius aperiam reiciendis aliquid tenetur molestiae ipsam
-        facilis ipsum! Nostrum itaque aliquam mollitia fuga molestiae laudantium
-        nesciunt possimus harum omnis labore ea dolorum corporis a, ad iure
-        accusantium officiis maxime rem ullam tenetur dolores tempore
-        consectetur quaerat. Distinctio amet ratione reiciendis culpa adipisci,
-        ipsam dicta incidunt perspiciatis! Saepe velit nemo animi cupiditate
-        eum! Eligendi unde illo accusamus repellat, aspernatur nisi blanditiis
-        saepe maxime? Optio rerum consequuntur alias voluptas distinctio eveniet
-        accusamus. Cum nemo quae eum libero aut. Consequuntur libero voluptates
-        vero eum temporibus neque soluta, quod sint labore laudantium hic
-        incidunt maxime ullam commodi quisquam molestiae a voluptatem beatae!
-        Suscipit blanditiis, dicta expedita voluptatem dolores aut aspernatur ut
-        molestias ea consectetur totam porro sunt facilis laborum, accusantium
-        culpa maiores iure dolor rem quisquam eum! Ab iste debitis eligendi
-        totam dolores architecto minima voluptates ut sit? Itaque nulla
-        voluptates quos inventore ut laborum distinctio ipsa odit facere labore
-        rem, repudiandae officiis eius, aut laboriosam mollitia tempore ipsam
-        excepturi corrupti, voluptatem illo voluptatum tenetur consequuntur
-        magnam. Dolorum odio, quasi dolor culpa atque aspernatur similique error
-        iusto excepturi aliquam alias sunt, quae commodi ut impedit soluta earum
-        eius doloribus! Vel dolorem modi fugiat architecto tempore quibusdam,
-        fugit voluptates?
-      </p>
+    <div className="bg-light overall">
+      <div className="pt-3">
+        <h3 className="text-center teams">__Teams</h3>
+      </div>
+      <div className="row p-5">
+        {about.map((data) => {
+          console.log(data);
+          return (
+            <div className="col-md-4 diver">
+              <div className="card diver2">
+                <div className="text-center p-3">
+                  <img
+                    className="text-center"
+                    src={data.image}
+                    style={{
+                      width: "100px",
+                      height: "100px",
+                      borderRadius: "100%",
+                    }}
+                    alt=""
+                  />
+                </div>
+                <div className="text-center">
+                  <p>{data.description}</p>
+                </div>
+                <button className="btn btn-success">Read more</button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
-
 
 export default About;
